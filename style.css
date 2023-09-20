@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: "JetBrains Mono", monospace;
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+h1 {
+  color: var(--Grey, #817d92);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (M) */
+  font-family: JetBrains Mono;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#generated {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 33.75rem;
+  height: 5rem;
+  flex-shrink: 0;
+  background: var(--Dark-Grey, #24232c);
+  color: var(--Almost-White, #e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: JetBrains Mono;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#generator {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.62rem;
+  width: 33.75rem;
+  height: 33rem;
+  flex-shrink: 0;
+  background: var(--Dark-Grey, #24232c);
+}
+
+#length {
+  display: inline-flex;
+  align-items: center;
+  gap: 16.5rem;
+  justify-content: space-between;
+  color: var(--Almost-White, #e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (M) */
+  font-family: JetBrains Mono;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#widthLength {
+  color: var(--Neon-Green, #a4ffaf);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (L) */
+  font-family: JetBrains Mono;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#strength {
+  display: flex;
+  justify-content: space-between;
+  width: 29.75rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  padding: 2rem;
+  background: #18171f;
+  color: var(--Grey, #817d92);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: JetBrains Mono;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-items: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider::-webkit-slider-thumb:hover {
+  background-color: #000;
+  border: 2px solid var(--Neon-Green, #a4ffaf);
+  filter: drop-shadow(0px 1px 2px #000);
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  outline: none;
+  opacity: 0.7;
+  background-color: #18171F;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background-color: var(--Almost-White, #e6e5ea);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.slidecontainer input {
+  width: 29.75rem;
+  height: 0.5rem;
+  flex-shrink: 0;
+}
+
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  background-color: transparent;
+  border: 2px solid var(--Almost-White, #e6e5ea);
+}
+
+.container {
+  color: var(--Almost-White, #e6e5ea);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (M) */
+  font-family: JetBrains Mono;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  border: 2px solid var(--Almost-White, rgba(164, 255, 175, 1));
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgba(164, 255, 175, 1);
+  border: #a4ffaf;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 2.5px;
+  width: 5px;
+  height: 10px;
+  border: solid #000;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 29.75rem;
+  height: 4.0625rem;
+  flex-shrink: 0;
+  color: var(--Dark-Grey, #24232c);
+  background: var(--Neon-Green, #a4ffaf);
+  border: none;
+
+  /* Body (M) */
+  font-family: JetBrains Mono;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  gap: 1.5rem;
+}
+
+button img {
+  width: 0.69406rem;
+  height: 0.75rem;
+}
+
+button:hover {
+  background-color: transparent;
+  border: 2px solid var(--Neon-Green, #a4ffaf);
+  color: var(--Neon-Green, #a4ffaf);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Body (M) */
+  font-family: JetBrains Mono;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  transition: 1s;
+}

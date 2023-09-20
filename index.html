@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="./components/images/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
+
+      <div id="generated">
+        P4$5W0rD!
+
+        <input
+          type="text"
+          name="texto"
+          id="texto"
+          placeholder="Digite alguma coisa"
+          value="https://programandosolucoes.dev.br/"
+          readonly
+        />
+
+        <img src="components/images/icon-copy.svg" alt="Copy icon" />
+        <button onclick="copiarTexto()">Copiar</button>
+      </div>
+
+      <div id="generator">
+        <div id="length">
+          Character Length
+          <div id="demo">10</div>
+        </div>
+        <div class="slidecontainer">
+          <input
+            type="range"
+            min="1"
+            max="20"
+            value="10"
+            class="slider"
+            id="myRange"
+          />
+        </div>
+
+        <div id="checkbox">
+          <label class="container"
+            >Include Uppercase Letters
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Include Lowercase Letters
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Include Numbers
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+          <label class="container"
+            >Include Symbols
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+
+        <div id="strength">STRENGTH</div>
+
+        <button>
+          GENERATE
+          <img src="components/images/icon-arrow-right.svg" alt="" />
+        </button>
+      </div>
+
+      <script src="index.js"></script>
+    </main>
+  </body>
+</html>
