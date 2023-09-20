@@ -34,7 +34,7 @@ h1 {
   font-feature-settings: "clig" off, "liga" off;
 
   /* Heading (M) */
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 700;
@@ -50,13 +50,31 @@ h1 {
   height: 5rem;
   flex-shrink: 0;
   background: var(--Dark-Grey, #24232c);
+}
+
+#texto {
   color: var(--Almost-White, #e6e5ea);
   font-feature-settings: "clig" off, "liga" off;
-  font-family: JetBrains Mono;
+  background: var(--Dark-Grey, #24232c);
+  font-family: "JetBrains Mono", monospace;
   font-size: 2rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  outline: none;
+  border: none;
+}
+
+#copybtn {
+  width: auto;
+  height: auto;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#copybtn:hover {
+  background-color: transparent;
+  border: none;
 }
 
 #generator {
@@ -79,42 +97,23 @@ h1 {
   font-feature-settings: "clig" off, "liga" off;
 
   /* Body (M) */
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 
-#widthLength {
+#demo {
   color: var(--Neon-Green, #a4ffaf);
   font-feature-settings: "clig" off, "liga" off;
 
   /* Heading (L) */
   font-family: JetBrains Mono;
-  font-size: 2rem;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-}
-
-#strength {
-  display: flex;
-  justify-content: space-between;
-  width: 29.75rem;
-  height: 4.5rem;
-  flex-shrink: 0;
-  padding: 2rem;
-  background: #18171f;
-  color: var(--Grey, #817d92);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: JetBrains Mono;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  align-items: center;
 }
 
 .slidecontainer {
@@ -133,7 +132,7 @@ h1 {
   height: 25px;
   outline: none;
   opacity: 0.7;
-  background-color: #18171F;
+  background-color: #18171f;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
 }
@@ -160,7 +159,6 @@ h1 {
   height: 0.5rem;
   flex-shrink: 0;
 }
-
 
 /* The container */
 .container {
@@ -202,7 +200,7 @@ h1 {
   font-feature-settings: "clig" off, "liga" off;
 
   /* Body (M) */
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
@@ -245,6 +243,38 @@ h1 {
   transform: rotate(45deg);
 }
 
+#strength {
+  display: flex;
+  justify-content: space-between;
+  width: 29.75rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  padding: 2rem;
+  background: #18171f;
+  color: var(--Grey, #817d92);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  align-items: center;
+}
+
+#stg {
+  color: var(--Almost-White, #e6e5ea);
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (M) */
+  font-family: JetBrains Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 button {
   display: flex;
   align-items: center;
@@ -257,17 +287,12 @@ button {
   border: none;
 
   /* Body (M) */
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   gap: 1.5rem;
-}
-
-button img {
-  width: 0.69406rem;
-  height: 0.75rem;
 }
 
 button:hover {
@@ -278,10 +303,15 @@ button:hover {
   font-feature-settings: "clig" off, "liga" off;
 
   /* Body (M) */
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   transition: 1s;
+}
+
+button:hover svg path {
+  transition: 1s;
+  fill: #a4ffaf;
 }
