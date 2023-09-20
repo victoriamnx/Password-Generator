@@ -29,4 +29,3 @@ function copiarTexto() {
   document.execCommand("copy");
   alert("O texto é: " + textoCopiado.value);
 }
-
