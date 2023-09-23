@@ -36,7 +36,6 @@ function gerarSenha() {
   const incluirMinusculas = document.getElementById("minusculas").checked;
   const incluirNumeros = document.getElementById("numeros").checked;
   const incluirSymbols = document.getElementById("symbols").checked;
-
   const maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const minusculas = "abcdefghijklmnopqrstuvwxyz";
   const numeros = "1234567890";
