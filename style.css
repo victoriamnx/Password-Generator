@@ -320,12 +320,12 @@ h1 {
   margin-right: 6px;
 }
 
-.bar1,
+/* .bar1,
 .bar2,
 .bar3 {
   border: rgba(248, 205, 101, 1) !important;
   background-color: rgba(248, 205, 101, 1);
-}
+} */
 
 button {
   display: flex;
