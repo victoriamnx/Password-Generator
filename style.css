@@ -62,6 +62,7 @@ h1 {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  user-select: none;
 }
 
 #passGenerated {
@@ -87,6 +88,11 @@ h1 {
 #copybtn:hover {
   background-color: transparent;
   border: none;
+}
+
+#generated:hover svg path {
+  transition: 1s;
+  fill: #fff;
 }
 
 #generator {
@@ -275,19 +281,50 @@ h1 {
   font-weight: 700;
   line-height: normal;
   align-items: center;
+  user-select: none;
 }
 
 #stg {
+  display: flex;
+  gap: 0.97rem;
   color: var(--Almost-White, #e6e5ea);
   text-align: right;
   font-feature-settings: "clig" off, "liga" off;
-
-  /* Heading (M) */
   font-family: JetBrains Mono;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+  user-select: none;
+}
+
+.bars {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+  height: 31px;
+  font-size: 24px;
+}
+
+.bars span {
+  display: block;
+  object-fit: cover;
+  font-size: 17px;
+}
+
+.bars div {
+  width: 10px;
+  min-width: 10px;
+  height: 28px;
+  border: 1px solid white;
+  margin-right: 6px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  border: rgba(248, 205, 101, 1) !important;
+  background-color: rgba(248, 205, 101, 1);
 }
 
 button {
@@ -329,11 +366,4 @@ button:hover {
 button:hover svg path {
   transition: 1s;
   fill: #a4ffaf;
-}
-
-.progress {
-  height: 20px;
-}
-.progress-bar {
-  background-color: #5bc0de;
 }
