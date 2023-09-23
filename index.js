@@ -23,9 +23,40 @@ function updateSliderBackground(slider) {
 }
 
 function copiarTexto() {
-  let textoCopiado = document.getElementById("texto");
+  let textoCopiado = document.getElementById("passGenerated");
   textoCopiado.select();
-  textoCopiado.setSelectionRange(0, 99999)
+  textoCopiado.setSelectionRange(0, 99999);
   document.execCommand("copy");
   alert("O texto é: " + textoCopiado.value);
+}
+
+function gerarSenha() {
+  const tamanho = parseInt(output.innerHTML); // Use o valor do div #demo
+  const incluirMaiusculas = document.getElementById("maiusculas").checked;
+  const incluirMinusculas = document.getElementById("minusculas").checked;
+  const incluirNumeros = document.getElementById("numeros").checked;
+  const incluirSymbols = document.getElementById("symbols").checked;
+
+  const maiusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const minusculas = "abcdefghijklmnopqrstuvwxyz";
+  const numeros = "1234567890";
+  const symbols = "!@#$%^&*";
+  const caracteres =
+    (incluirMaiusculas ? maiusculas : "") +
+    (incluirMinusculas ? minusculas : "") +
+    (incluirNumeros ? numeros : "") +
+    (incluirSymbols ? symbols : "");
+
+  if (caracteres === "") {
+    alert("Pelo menos uma opção de caracteres deve ser selecionada");
+    return;
+  }
+
+  let senha = "";
+  for (let i = 0; i < tamanho; i++) {
+    const indiceAleatorio = Math.floor(Math.random() * caracteres.length);
+    senha += caracteres.charAt(indiceAleatorio);
+  }
+
+  document.getElementById("passGenerated").value = senha;
 }
