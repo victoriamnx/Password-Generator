@@ -304,6 +304,7 @@ h1 {
   align-self: flex-end;
   height: 31px;
   font-size: 24px;
+  gap: 6px;
 }
 
 .bars span {
@@ -317,15 +318,12 @@ h1 {
   min-width: 10px;
   height: 28px;
   border: 1px solid white;
-  margin-right: 6px;
 }
 
-/* .bar1,
-.bar2,
-.bar3 {
-  border: rgba(248, 205, 101, 1) !important;
-  background-color: rgba(248, 205, 101, 1);
-} */
+.bar1 {
+  border: #f64a4a !important;
+  background-color: #f64a4a;
+}
 
 button {
   display: flex;

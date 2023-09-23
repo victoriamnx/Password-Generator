@@ -30,37 +30,8 @@ function copiarTexto() {
   alert("O texto é: " + textoCopiado.value);
 }
 
-function calcularForcaSenha(senha) {
-  let forca = 0;
-
-  // Verificar o comprimento da senha
-  forca += senha.length * 4;
-
-  // Verificar se a senha possui letras maiúsculas
-  if (/[A-Z]/.test(senha)) {
-    forca += (senha.length - senha.replace(/[A-Z]/g, "").length) * 2;
-  }
-
-  // Verificar se a senha possui letras minúsculas
-  if (/[a-z]/.test(senha)) {
-    forca += (senha.length - senha.replace(/[a-z]/g, "").length) * 2;
-  }
-
-  // Verificar se a senha possui números
-  if (/[1-9]/.test(senha)) {
-    forca += (senha.length - senha.replace(/[1-9]/g, "").length) * 4;
-  }
-
-  // Verificar se a senha possui símbolos
-  if (/[!@#$%¨&*]/.test(senha)) {
-    forca += (senha.length - senha.replace(/[!@#$%¨&*]/g, "").length) * 6;
-  }
-
-  return forca;
-}
-
 function gerarSenha() {
-  const tamanho = parseInt(output.innerHTML);
+  const tamanho = parseInt(output.innerHTML); // Use o valor do div #demo
   const incluirMaiusculas = document.getElementById("maiusculas").checked;
   const incluirMinusculas = document.getElementById("minusculas").checked;
   const incluirNumeros = document.getElementById("numeros").checked;
@@ -86,29 +57,5 @@ function gerarSenha() {
     senha += caracteres.charAt(indiceAleatorio);
   }
 
-  const forcaSenha = calcularForcaSenha(senha);
-
   document.getElementById("passGenerated").value = senha;
-
-  // Exibir a força da senha
-  const strengthText = document.getElementById("stg");
-  const strengthBars = document.querySelectorAll(".bars > div");
-  let strengthLevel = "WEAK";
-
-  if (forcaSenha >= 60) {
-    strengthLevel = "STRONG";
-  } else if (forcaSenha >= 30) {
-    strengthLevel = "MEDIUM";
-  }
-
-  strengthText.innerText = strengthLevel;
-
-  // Atualizar barras de força
-  strengthBars.forEach((bar, index) => {
-    if (index < forcaSenha / 10) {
-      bar.style.backgroundColor = "#a4ffaf";
-    } else {
-      bar.style.backgroundColor = "#18171F";
-    }
-  });
 }
