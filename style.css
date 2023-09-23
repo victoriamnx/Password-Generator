@@ -52,7 +52,19 @@ h1 {
   background: var(--Dark-Grey, #24232c);
 }
 
-#texto {
+::placeholder {
+  color: rgba(230, 229, 234, 0.25);
+  font-feature-settings: "clig" off, "liga" off;
+
+  /* Heading (L) */
+  font-family: JetBrains Mono;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#passGenerated {
   color: var(--Almost-White, #e6e5ea);
   font-feature-settings: "clig" off, "liga" off;
   background: var(--Dark-Grey, #24232c);
@@ -105,6 +117,9 @@ h1 {
 }
 
 #demo {
+  background: transparent;
+  border: none;
+  outline: none;
   color: var(--Neon-Green, #a4ffaf);
   font-feature-settings: "clig" off, "liga" off;
 
@@ -314,4 +329,11 @@ button:hover {
 button:hover svg path {
   transition: 1s;
   fill: #a4ffaf;
+}
+
+.progress {
+  height: 20px;
+}
+.progress-bar {
+  background-color: #5bc0de;
 }
