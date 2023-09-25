@@ -1,5 +1,5 @@
 var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var output = document.getElementById("length");
 
 output.innerHTML = slider.value;
 
@@ -27,11 +27,23 @@ function copiarTexto() {
   textoCopiado.select();
   textoCopiado.setSelectionRange(0, 99999);
   document.execCommand("copy");
-  alert("O texto é: " + textoCopiado.value);
+
+  // Esconde o ícone
+  const copyIcon = document.getElementById("copybtn");
+  copyIcon.style.display = "none";
+
+  // Exibe o texto "Copied" por 2 segundos
+  const copiedText = document.getElementById("copiedText");
+  copiedText.style.display = "flex";
+  setTimeout(() => {
+    copiedText.style.display = "none";
+    // Torna a exibir o ícone após o desaparecimento do texto
+    copyIcon.style.display = "inline";
+  }, 2000); // Tempo em milissegundos (2 segundos no exemplo)
 }
 
 function gerarSenha() {
-  const tamanho = parseInt(output.innerHTML); // Use o valor do div #demo
+  const tamanho = parseInt(output.innerHTML); // valor da div #length
   const incluirMaiusculas = document.getElementById("maiusculas").checked;
   const incluirMinusculas = document.getElementById("minusculas").checked;
   const incluirNumeros = document.getElementById("numeros").checked;
@@ -47,7 +59,7 @@ function gerarSenha() {
     (incluirSymbols ? symbols : "");
 
   if (caracteres === "") {
-    alert("Pelo menos uma opção de caracteres deve ser selecionada");
+    alert("At least one character option must be selected");
     return;
   }
 
@@ -59,3 +71,4 @@ function gerarSenha() {
 
   document.getElementById("passGenerated").value = senha;
 }
+
