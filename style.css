@@ -76,6 +76,7 @@ h1 {
   font-weight: 700;
   font-style: normal;
   line-height: normal;
+  user-select: none;
   color: var(--Almost-White, #e6e5ea);
   background: var(--Dark-Grey, #24232c);
   font-family: "JetBrains Mono", monospace;
@@ -323,7 +324,7 @@ span {
   width: 10px;
   height: 28px;
   min-width: 10px;
-  border: 1px solid white;
+  border: 2px solid var(--Almost-White, #e6e5ea);
 }
 
 button {
