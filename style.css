@@ -1,9 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap");
 
+:root {
+  --main-bg-color: pink;
+  --Dark-Grey: #24232c;
+  --Grey: #817d92;
+  --Almost-White: #e6e5ea;
+  --Very-Dark-Grey: #18171f;
+  --Neon-Green: #a4ffaf;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "JetBrains Mono", monospace;
+  font-feature-settings: "clig" off, "liga" off;
 }
 
 html,
@@ -16,7 +27,6 @@ body {
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-family: "JetBrains Mono", monospace;
   background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
 }
 
@@ -29,339 +39,325 @@ main {
 }
 
 h1 {
-  color: var(--Grey, #817d92);
-  text-align: right;
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Heading (M) */
-  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
+  color: var(--Grey, #817d92);
+  font-family: "JetBrains Mono", monospace;
 }
 
 #generated {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 5rem;
   padding: 2rem;
   width: 33.75rem;
-  height: 5rem;
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
   background: var(--Dark-Grey, #24232c);
 }
 
 ::placeholder {
-  color: rgba(230, 229, 234, 0.25);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Heading (L) */
-  font-family: JetBrains Mono;
   font-size: 2rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   user-select: none;
+  font-style: normal;
+  line-height: normal;
+  color: rgba(230, 229, 234, 0.25);
+  font-family: "JetBrains Mono", monospace;
 }
 
 #passGenerated {
+  width: 362px;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
   color: var(--Almost-White, #e6e5ea);
-  font-feature-settings: "clig" off, "liga" off;
   background: var(--Dark-Grey, #24232c);
   font-family: "JetBrains Mono", monospace;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  outline: none;
-  border: none;
 }
 
 #copybtn {
   width: auto;
   height: auto;
-  background-color: transparent;
   cursor: pointer;
+  background-color: transparent;
 }
 
 #copybtn:hover {
   background-color: transparent;
-  border: none;
+}
+
+span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1.125rem;
+  color: var(--Neon-Green, #a4ffaf);
+  font-family: "JetBrains Mono", monospace;
+}
+
+.hidden {
+  display: none;
 }
 
 #generated:hover svg path {
-  transition: 1s;
   fill: #fff;
+  transition: 1s;
 }
 
 #generator {
   display: flex;
   flex-direction: column;
-  padding: 2rem;
   gap: 1.62rem;
-  width: 33.75rem;
+  padding: 2rem;
   height: 33rem;
+  width: 33.75rem;
   flex-shrink: 0;
   background: var(--Dark-Grey, #24232c);
 }
 
-#length {
+#ctlenth {
   display: inline-flex;
   align-items: center;
-  gap: 16.5rem;
   justify-content: space-between;
-  color: var(--Almost-White, #e6e5ea);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Body (M) */
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.125rem;
-  font-style: normal;
+  gap: 16.5rem;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
+  font-size: 1.125rem;
+  color: var(--Almost-White, #e6e5ea);
+  font-family: "JetBrains Mono", monospace;
 }
 
-#demo {
-  background: transparent;
+#length {
   border: none;
   outline: none;
-  color: var(--Neon-Green, #a4ffaf);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Heading (L) */
-  font-family: JetBrains Mono;
   font-size: 32px;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
+  background: transparent;
   line-height: normal;
+  color: var(--Neon-Green, #a4ffaf);
+  font-family: "JetBrains Mono", monospace;
 }
 
-.slidecontainer {
+.sliderctn {
   width: 100%;
 }
 
 .slider::-webkit-slider-thumb:hover {
   background-color: #000;
-  border: 2px solid var(--Neon-Green, #a4ffaf);
   filter: drop-shadow(0px 1px 2px #000);
+  border: 2px solid var(--Neon-Green, #a4ffaf);
 }
 
 .slider {
-  -webkit-appearance: none;
   width: 100%;
   height: 25px;
-  outline: none;
   opacity: 0.7;
-  background-color: #18171f;
+  outline: none;
+  appearance: none;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  background-color: #18171f;
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
   width: 28px;
   height: 28px;
-  border-radius: 999px;
-  background-color: var(--Almost-White, #e6e5ea);
   cursor: pointer;
+  appearance: none;
+  border-radius: 999px;
+  -webkit-appearance: none;
+  background-color: var(--Almost-White, #e6e5ea);
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #ffffff;
   cursor: pointer;
+  background: #ffffff;
 }
 
-.slidecontainer input {
-  width: 29.75rem;
+.sliderctn input {
   height: 0.5rem;
   flex-shrink: 0;
+  width: 29.75rem;
 }
 
-/* The container */
-.container {
+.checkctn {
   display: block;
+  cursor: pointer;
+  font-size: 22px;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Hide the browser's default checkbox */
-.container input {
-  position: absolute;
+.checkctn input {
+  width: 0;
+  height: 0;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
+  position: absolute;
 }
 
 /* Create a custom checkbox */
 .checkmark {
-  position: absolute;
   top: 0;
   left: 0;
+  flex-shrink: 0;
   width: 1.25rem;
   height: 1.25rem;
-  flex-shrink: 0;
+  position: absolute;
   background-color: transparent;
   border: 2px solid var(--Almost-White, #e6e5ea);
 }
 
-.container {
-  color: var(--Almost-White, #e6e5ea);
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Body (M) */
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.125rem;
-  font-style: normal;
+.checkctn {
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
+  font-size: 1.125rem;
+  color: var(--Almost-White, #e6e5ea);
+  font-family: "JetBrains Mono", monospace;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
+.checkctn:hover input ~ .checkmark {
   border: 2px solid var(--Almost-White, rgba(164, 255, 175, 1));
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: rgba(164, 255, 175, 1);
+.checkctn input:checked ~ .checkmark {
   border: #a4ffaf;
+  background-color: rgba(164, 255, 175, 1);
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
-  position: absolute;
   display: none;
+  position: absolute;
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.checkctn input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.checkctn .checkmark:after {
   left: 5px;
   top: 2.5px;
   width: 5px;
   height: 10px;
   border: solid #000;
   border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
-#strength {
+#strengthctn {
   display: flex;
   justify-content: space-between;
   width: 29.75rem;
   height: 4.5rem;
   flex-shrink: 0;
   padding: 2rem;
-  background: #18171f;
-  color: var(--Grey, #817d92);
-  text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.125rem;
-  font-style: normal;
   font-weight: 700;
+  user-select: none;
+  text-align: center;
+  font-style: normal;
   line-height: normal;
   align-items: center;
-  user-select: none;
+  font-size: 1.125rem;
+  background: #18171f;
+  color: var(--Grey, #817d92);
+  font-family: "JetBrains Mono", monospace;
 }
 
-#stg {
+#strength {
   display: flex;
-  gap: 0.97rem;
-  color: var(--Almost-White, #e6e5ea);
   text-align: right;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: JetBrains Mono;
+  gap: 0.97rem;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
+  font-style: normal;
   line-height: normal;
   user-select: none;
+  color: var(--Almost-White, #e6e5ea);
+  font-family: "JetBrains Mono", monospace;
 }
 
 .bars {
   display: flex;
   align-items: center;
   align-self: flex-end;
+  gap: 6px;
   height: 31px;
   font-size: 24px;
-  gap: 6px;
 }
 
 .bars span {
   display: block;
-  object-fit: cover;
   font-size: 17px;
+  object-fit: cover;
 }
 
 .bars div {
   width: 10px;
-  min-width: 10px;
   height: 28px;
+  min-width: 10px;
   border: 1px solid white;
 }
 
-.bar1 {
-  border: #f64a4a !important;
-  background-color: #f64a4a;
-}
-
 button {
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 29.75rem;
   height: 4.0625rem;
+  gap: 1.5rem;
   flex-shrink: 0;
-  color: var(--Dark-Grey, #24232c);
-  background: var(--Neon-Green, #a4ffaf);
-  border: none;
-
-  /* Body (M) */
-  font-family: "JetBrains Mono", monospace;
+  font-weight: 700;
   font-size: 1.125rem;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  gap: 1.5rem;
+  color: var(--Dark-Grey, #24232c);
+  background: var(--Neon-Green, #a4ffaf);
+  font-family: "JetBrains Mono", monospace;
 }
 
 button:hover {
-  background-color: transparent;
-  border: 2px solid var(--Neon-Green, #a4ffaf);
-  color: var(--Neon-Green, #a4ffaf);
   text-align: center;
-  font-feature-settings: "clig" off, "liga" off;
-
-  /* Body (M) */
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
   transition: 1s;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  font-size: 1.125rem;
+  background-color: transparent;
+  color: var(--Neon-Green, #a4ffaf);
+  font-family: "JetBrains Mono", monospace;
+  border: 2px solid var(--Neon-Green, #a4ffaf);
 }
 
 button:hover svg path {
-  transition: 1s;
   fill: #a4ffaf;
+  transition: 1s;
 }
