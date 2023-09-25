@@ -2,11 +2,11 @@
 
 :root {
   --main-bg-color: pink;
-  --Dark-Grey: #24232c;
   --Grey: #817d92;
+  --Dark-Grey: #24232c;
+  --Neon-Green: #a4ffaf;
   --Almost-White: #e6e5ea;
   --Very-Dark-Grey: #18171f;
-  --Neon-Green: #a4ffaf;
 }
 
 * {
