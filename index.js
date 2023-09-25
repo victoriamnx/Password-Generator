@@ -72,3 +72,4 @@ function gerarSenha() {
   document.getElementById("passGenerated").value = senha;
 }
 
+
