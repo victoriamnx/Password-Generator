@@ -13,7 +13,8 @@ This is a solution to the [Password generator app challenge on Frontend Mentor](
 
 # Result
 
-Coming soon...
+![image](https://github.com/victoriamnx/Password-Generator/assets/96449803/0171b0cb-048f-4d56-86a9-78eaca263c28)
+![image](https://github.com/victoriamnx/Password-Generator/assets/96449803/fe981d84-9e21-48c0-82a4-4becd433a85d)
 
 # Links
 
